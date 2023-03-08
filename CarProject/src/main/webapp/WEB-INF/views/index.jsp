@@ -103,7 +103,7 @@
                 <li class="float_l"><a href="/sub/sell2.php">네비1</a></li>
                 <li class="float_l"><a href="/sub/sell_price.php">네비2</a></li>
                 <li class="float_l"><a href="/sub/buy2.php">네비3</a></li>
-                <li class="float_l"><a href="/sub/installment2.php">네비4</a></li>
+                <li class="float_l"><a href="/Ad/ad_insert">ad test</a></li>
                 <li class="float_l pad_r_0"><a href="/sub/company.php">적토마</a></li>
             </ul>
         </div>
