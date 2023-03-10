@@ -12,5 +12,5 @@ public class NewsDTO {
 	private String contents;
 	private String photo;
 	private String regdate;
-	private int readcnt;
+	private int readcnt;	
 }
