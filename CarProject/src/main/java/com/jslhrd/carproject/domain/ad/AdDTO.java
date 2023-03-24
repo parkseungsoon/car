@@ -9,7 +9,7 @@ public class AdDTO {
 	private String start_date;
 	private String end_date;
 	private String ad_gubun;
-	private String grade;
+	private String ad_grade;
 	private int ad_price;
 	private String pass;
 	private String subject;

@@ -4,7 +4,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><!--인터넷 익스플로러 최신버전 렌더링-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=0.5, user-scalable=no,target-densitydpi=device-dpi"><!--뷰포트-->    
+    
+<title>적토마</title>
+
+
 </head>
 <body>
 	<header>
