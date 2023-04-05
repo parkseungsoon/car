@@ -3,6 +3,6 @@
 <mapper namespace="com.jslhrd.carproject.mapper.ad.AdMapper">
 	<insert id="adInsert">
 		insert into ad(idx,user_id,start_date,end_date,ad_gubun,ad_grade,ad_price,pass,subject,contents,photo)
-			values(#{get_seq('ad_seq')},#{user_id},#{start_date},#{end_date},#{ad_gubun},#{ad_grade},#{ad_price},#{pass},#{subject},#{contents},#{photo})
+			values(get_seq('ad_Seq'),#{user_id},#{start_date},#{end_date},#{ad_gubun},#{ad_grade},#{ad_price},#{pass},#{subject},#{contents},#{photo})
 	</insert>
 </mapper>

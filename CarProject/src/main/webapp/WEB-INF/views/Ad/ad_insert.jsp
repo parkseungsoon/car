@@ -17,6 +17,14 @@
     <!-- 드롭존 사용  -->  
     <script src="https://rawgit.com/enyo/dropzone/master/dist/dropzone.js"></script>    
 	<link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css">
+	
+	<!-- datepicker -->
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+	<script src="//code.jquery.com/jquery-1.12.4.js">	
+	
+	</script>
+	<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js">
+	</script> 
 </head>
 <body>
 	<%@include file="../Include/header.jsp" %>
@@ -37,8 +45,7 @@
 			default:
 				return 0;
 			}
-		}
-		
+		}		
 		// 시작일, 종료일 input에 change 이벤트 추가
 		function getDateDiff(start_date, end_date) {
 			const diffTime = Math.abs(end_date - start_date);
@@ -85,7 +92,8 @@
                 var submitButton = document.querySelector("#btn-upload-file");
                 var myDropzone = this; //closure
                 submitButton.addEventListener("click", function () {
-                    console.log("업로드"); //tell Dropzone to process all queued files
+                    /* console.log("업로드"); //tell Dropzone to process all queued files */
+                   
                     myDropzone.processQueue();
                 });
             },
@@ -98,15 +106,45 @@
             parallelUploads: 5, // 동시파일업로드 수(이걸 지정한 수 만큼 여러파일을 한번에 컨트롤러에 넘긴다.)
             addRemoveLinks: true, // 삭제버튼 표시 여부
             dictRemoveFile: '삭제', // 삭제버튼 표시 텍스트
-            uploadMultiple: false, // 다중업로드 기능
-        };
+            uploadMultiple: false, // 다중업로드 기능            
+        };        
+    </script>
+    <script>
+ // datepicker 한글설정
+	$("#datepicker").datepicker({
+		dateFormat: 'yy-mm-dd',
+		prevText: '이전 달',
+		nextText: '다음 달',
+		monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+		monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+		dayNames: ['일','월','화','수','목','금','토'],
+		dayNamesShort: ['일','월','화','수','목','금','토'],
+		dayNamesMin: ['일','월','화','수','목','금','토'],
+		showMonthAfterYear: true,
+		changeMonth: true,
+		changeYear: true,
+		yearSuffix: '년',
+		beforeShowDay: disableSomeDay
+	});
+	
+	// datepicker 제외할 날짜
+	var disabledDays = ["2023-04-16"]; //기예약된 일자 (DB) 
+	function disableSomeDay(date) {
+		var month = date.getMonth();
+		var dates = date.getDate();
+		var year = date.getFullYear();	
+		for(i = 0; i < disabledDays.length; i++){
+			if($.inArray(year + '-' +(month+1) + '-' + dates, disabledDays) != -1) {
+				retrun [false];
+			}
+	}		
     </script>
 	<section id="section_common" class="min_w_1200">
 		<article class="container">
 			<div id="sub04" class="buy_banner_2 over_h ko_font">
 				<h2 class="ko_font text_center">광고 등록</h2>
 				<p class="ko_font text_center">아래 양식을 작성하여 광고를 등록하세요.</p>
-				<form name="insert" action="ad_insert" method="post" enctype="multipart/form-data">
+				<form name="insert" action="ad_insert" method="post">
 					<input type="hidden" name="user_id">
 					<!-- 광고 등록 양식 시작 -->
 					<p class="ko_font float_l" style="width: 50%">광고유형</p>
@@ -136,9 +174,11 @@
 					<textarea id="counsel_txt" name="contents" placeholder="광고 내용을 입력하세요"></textarea>
 					<p class="ko_font float_l" style="width: 50%">사진등록</p>		
 					<div class="dropzone" id="fileDropzone" style="margin-top: 50px"></div> 
+					<!-- <div class="dropzone" id="fileDropzone" style="margin-top: 50px"></div> -->
      				<!-- <button id="btn-upload-file">서버전송</button>	 -->		
 					<input class="ko_font" type="submit" value="등록하기" id="btn_upload-file" style="display: inline-block; margin-left: 280px">				
-					<input class="ko_font" type="submit" value="돌아가기" style="display: inline-block;">				
+					<input class="ko_font" type="submit" value="돌아가기" style="display: inline-block;">
+					<input type="date" id="datepicker">				
 				</form>				 				
 		 </div>
 		</article>
