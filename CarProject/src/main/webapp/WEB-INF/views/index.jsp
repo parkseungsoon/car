@@ -91,7 +91,7 @@
             <p class="float_l ko_font">전국어디서나 1522-9907</p>
             <ul class="float_r over_h">
 
-                                    <li class="float_l"><a href="/member/login.html">로그인</a></li>
+                    <li class="float_l"><a href="/member/login.html">로그인</a></li>
                     <li class="float_l"><a href="/member/join01.html">회원가입</a></li>
                             </ul>
         </div>
@@ -102,8 +102,8 @@
             <ul class="float_r over_h ">
                 <li class="float_l"><a href="/sub/sell2.php">네비1</a></li>
                 <li class="float_l"><a href="/sub/sell_price.php">네비2</a></li>
-                <li class="float_l"><a href="/sub/buy2.php">네비3</a></li>
-                <li class="float_l"><a href="/Ad/ad_insert">ad test</a></li>
+                <li class="float_l"><a href="/Ad/ad_test">ad test</a></li>
+                <li class="float_l"><a href="/Ad/ad_insert">ad insert</a></li>
                 <li class="float_l pad_r_0"><a href="/sub/company.php">적토마</a></li>
             </ul>
         </div>

@@ -35,5 +35,9 @@ public class AdController {
 	@GetMapping("ad_winsert_pro")
 	public void adInsertProPass() {
 		log.info("adInsertProPass");
-	}	
+	}
+	@GetMapping("ad_test")
+	public void adTest() {
+		log.info("adTest");
+	}
 }

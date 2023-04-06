@@ -11,24 +11,89 @@
     <link rel="stylesheet" type="text/css" href="/css/bttn.min.css"/>
     <link rel="stylesheet" type="text/css" href="/css/style.css"/>
     <link rel="stylesheet" type="text/css" href="/css/media-query.css"/>
-    <script src="/js/jquery-1.8.3.min.js"></script>
-    <script type="text/javascript" src="/js/jquery.bxslider.min.js"></script>
+    
     
     <!-- 드롭존 사용  -->  
     <script src="https://rawgit.com/enyo/dropzone/master/dist/dropzone.js"></script>    
 	<link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css">
 	
-	<!-- datepicker -->
-	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
-	<script src="//code.jquery.com/jquery-1.12.4.js">	
+	<!-- jquery : datepicker -->
 	
-	</script>
-	<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js">
-	</script> 
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">	
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<style type="text/css">
+		.ui-datepicker { font:14px dotum; }
+		.ui-datepicker select.ui-datepicker-month, 
+		.ui-datepicker select.ui-datepicker-year { width: 100px;}
+		.ui-datepicker-trigger { margin:0 0 -5px 2px; }
+		
+	</style>
 </head>
 <body>
 	<%@include file="../Include/header.jsp" %>
 	<script>
+		jQuery(function($){
+			    
+			    /*
+			    //config 값을 json형식으로 만든후 setDefaults로 설정할수도 있음.
+			     
+			    $.datepicker.regional['ko'] = {closeText: '닫기',dayNamesShort: ['일','월','화','수','목','금','토']};
+			    $.datepicker.setDefaults($.datepicker.regional['ko']);
+			    */
+			     
+			    $("#calander").datepicker({
+			        changeMonth:true,
+			        changeYear:true,
+			        yearRange:"1900:2014",
+			        showOn:"both",
+			        buttonImage:"../img/ico/calendar.gif",
+			        buttonImageOnly:true,
+			        dateFormat: 'yy-mm-dd',
+			        showOtherMonths: true,
+			        selectOtherMonths: true,
+			        showMonthAfterYear: true,
+			        dayNamesMin: ['일','월', '화', '수', '목', '금', '토'],
+			        monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+			        monthNames: ['년 1월','년 2월','년 3월','년 4월','년 5월','년 6월','년 7월','년 8월','년 9월','년 10월','년 11월','년 12월'],
+			        nextText: '다음 달',
+			        prevText: '이전 달',
+			        beforeShowDay: disableAllTheseDays 
+			    });
+			     
+			});
+			 
+			// 특정날짜들 배열
+			var disabledDays = ["2023-4-8","2013-7-24","2013-7-26"];
+			 
+			// 주말(토, 일요일) 선택 막기
+			function noWeekendsOrHolidays(date) {
+			    var noWeekend = jQuery.datepicker.noWeekends(date);
+			    return noWeekend[0] ? [true] : noWeekend;
+			}
+			 
+			// 일요일만 선택 막기
+			function noSundays(date) {
+			  return [date.getDay() != 0, ''];
+			}
+			 
+			// 이전 날짜들은 선택막기
+			function noBefore(date){
+			    if (date < new Date())
+			        return [false];
+			    return [true];
+			}
+			 
+			// 특정일 선택막기
+			function disableAllTheseDays(date) {
+			    var m = date.getMonth(), d = date.getDate(), y = date.getFullYear();
+			    for (i = 0; i < disabledDays.length; i++) {
+			        if($.inArray(y + '-' +(m+1) + '-' + d,disabledDays) != -1) {
+			            return [false];
+			        }
+			    }
+			    return [true];
+			}	
 		// ad_grade에 따른 가격 계산 함수
 		function getPriceByGrade(ad_grade) {
 			switch (ad_grade) {
@@ -108,37 +173,7 @@
             dictRemoveFile: '삭제', // 삭제버튼 표시 텍스트
             uploadMultiple: false, // 다중업로드 기능            
         };        
-    </script>
-    <script>
- // datepicker 한글설정
-	$("#datepicker").datepicker({
-		dateFormat: 'yy-mm-dd',
-		prevText: '이전 달',
-		nextText: '다음 달',
-		monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
-		monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
-		dayNames: ['일','월','화','수','목','금','토'],
-		dayNamesShort: ['일','월','화','수','목','금','토'],
-		dayNamesMin: ['일','월','화','수','목','금','토'],
-		showMonthAfterYear: true,
-		changeMonth: true,
-		changeYear: true,
-		yearSuffix: '년',
-		beforeShowDay: disableSomeDay
-	});
-	
-	// datepicker 제외할 날짜
-	var disabledDays = ["2023-04-16"]; //기예약된 일자 (DB) 
-	function disableSomeDay(date) {
-		var month = date.getMonth();
-		var dates = date.getDate();
-		var year = date.getFullYear();	
-		for(i = 0; i < disabledDays.length; i++){
-			if($.inArray(year + '-' +(month+1) + '-' + dates, disabledDays) != -1) {
-				retrun [false];
-			}
-	}		
-    </script>
+    </script> 
 	<section id="section_common" class="min_w_1200">
 		<article class="container">
 			<div id="sub04" class="buy_banner_2 over_h ko_font">
@@ -178,7 +213,7 @@
      				<!-- <button id="btn-upload-file">서버전송</button>	 -->		
 					<input class="ko_font" type="submit" value="등록하기" id="btn_upload-file" style="display: inline-block; margin-left: 280px">				
 					<input class="ko_font" type="submit" value="돌아가기" style="display: inline-block;">
-					<input type="date" id="datepicker">				
+					<input type="text" id="calander">				
 				</form>				 				
 		 </div>
 		</article>
