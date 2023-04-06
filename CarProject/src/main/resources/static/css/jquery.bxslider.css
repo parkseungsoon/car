@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * BxSlider v4.1.2 - Fully loaded, responsive content slider
  * http://bxslider.com
@@ -183,7 +184,7 @@
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	background: #666\9;
+	background: #6669;
 	background: rgba(80, 80, 80, 0.75);
 	width: 100%;
 }

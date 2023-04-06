@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face { /* ë‚˜ëˆ”ê³ ë”• Regular */  
     font-family: 'Nanum Gothic';  
     font-style: normal;  
@@ -80,9 +81,7 @@ input::-moz-placeholder {}
 input::-ms-input-placeholder {} 
 
 /*ë“œëž˜ê·¸ í•˜ì´ë¼ì´íŠ¸ ìƒ‰ ë³€ê²½*/
-::selection { background: ; } 
-::-moz-selection { background: ; } 
-::-webkit-selection { background: ; }
+
 
 /* ### í¬ë¡¬ ìŠ¤í¬ë¡¤ ### 
 ::-webkit-scrollbar {

@@ -10,11 +10,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("")
-public class carprojectController {
-	private static final Logger log = LoggerFactory.getLogger(carprojectController.class);
+public class CarprojectController {
+	private static final Logger log = LoggerFactory.getLogger(CarprojectController.class);
 	
-@GetMapping("index")
-public void Index() {
+	@GetMapping("index")
+	public void Index() {
 	
-}
+	}
+
+
 }

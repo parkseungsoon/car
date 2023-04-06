@@ -3,6 +3,7 @@
 <!doctype html>
 
 <html lang="ko">
+
 <head>
 
     <meta charset="UTF-8"><!--문자 인코딩-->
@@ -254,12 +255,13 @@
 
 <section id="section_common" class="min_w_1200">
     <article class="container hide_720">
+        	
         <h3 class=" banner_1">내차 견적은 내가 직접, <span class="font_bold">적토마</span>에서<br><span class="font_bold">견적전문기업 적토마</span>가 도와드리겠습니다.</h3>
     </article>
 </section>
 
 <section id="section_common" class="min_w_1200 quick_part_wrap">
-    <article class="container over_h">
+    <article class="container over_h" >
         <div class="float_l quick_part">
             <h4 class="ko_font">차량판매절차</h4>
             <iframe width="100%" height="290" src="https://www.youtube.com/embed/sZNvnY5aUQo" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
@@ -355,6 +357,7 @@
     <ul class="container special_wrap over_h ko_font">
 
     </ul>
+
 </section>
 
 <section id="section_common" class="min_w_1200 hide show_720">
@@ -367,13 +370,19 @@
         <li class="mar_b_0"><img src="images/banner_2_icon_5_m.png" alt="">보험료 환급까지</li>
         <li class="mar_b_0 bor_r_0"><img src="images/banner_2_icon_6_m.png" alt="">당일 명의이전</li>
     </ul>
+    
 </section>
+
+
 
 <section id="section_common" class="min_w_1200 hide_720">
     <div class="container">
         <img src="images/banner_3.jpg" alt="">
     </div>
 </section>
+
+
+
 
 <section id="section_common" class="min_w_1200 counsel_num">
     <div class="container over_h">
@@ -448,7 +457,7 @@
         </div>
     </div>
 </section>
-
+	
     <footer class="min_w_1200">
         <div class="top_footer">
             <ul class="container hide_720">
@@ -526,6 +535,7 @@ wcs_do(_nasa);
             <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/823315541/?label=JDtGCMGuiXsQ1ZjLiAM&amp;guid=ON&amp;script=0"/>
         </div>
     </noscript>
+    <img src="images/수박.jpg" width="175" height="250">
     -->
 </body>
 

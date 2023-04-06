@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @media screen and (max-width:1200px) {
     .show_1200 {display: block;}
     .hide_1200 {display: none;}
@@ -335,7 +336,7 @@
 	.priceResult ul li #result_carName {line-height: 22px;margin: 10px 0 10px; letter-spacing: -1px;}
 	.priceResult ul li div.price span {font-size: 3rem; display: block; padding-right: 0px;margin-bottom: 5px;}
 	.priceResult ul li div.box {background:white;padding: 26px 0px 27px;}
-
+}
 @media screen and (max-width:480px) {
     .show_480 {display: block;}
     .hide_480 {display: none;}
