@@ -32,7 +32,7 @@ h1 { text-indent: -9999px; margin: 0 auto; width: 160px; height: 35px; backgroun
 .agreeDetail h3 {margin: 10px 0; font-weight:bold;}
 .agreeDetail p {line-height:1.8rem; font-size:1.5rem !important;}
 .agreeDetail a {width:200px; height:35px; color:white; display:block; margin:10px auto 0; background:#0d6fb8;text-align:center; line-height:35px; cursor:pointer;}
-#section_common {margin-bottom: 20px;}
+#section_common {margin-bottom: 20px; }
 .banner_1 {background: url('../images/banner_1.jpg') no-repeat; height: 170px;font-family: 'NanumSquare_L'; font-size: 3.5rem;padding: 40px;line-height: 4.5rem;}
 .banner_1 .font_bold {line-height: 2.2rem;display: inline-block;border-bottom: 5px solid #0d6fb8; }
 .quick_part_wrap .quick_part {border-top: 4px solid #d9d9d9; width:280px; margin-right: 20px;}
@@ -225,7 +225,7 @@ div#sell_counsel_area select#counsel_area, #sub_select_wrap #sub_select {width: 
 .buy_banner .buy_list {padding-top: 25px; width: 380px; background: rgba(0,0,0,0.5); margin-top: 20px;}
 .buy_banner .buy_list ul li {width: 264px; height: 60px; text-align: center; line-height: 60px; color: white; margin: 0 auto 10px; font-size: 1.8rem; border: 1px solid white;}
 .buy_banner .buy_list ul li:last-child {margin-bottom:20px;}
-.buy_banner_2 {background: url('../images/sub03_banner_2.jpg') no-repeat; height: 655px; padding: 45px 40px; position:relative;}
+.buy_banner_2 {background: url('../images/sub03_banner_2.jpg') no-repeat; height: 1200px; padding: 45px 40px; position:relative;}
 .buy_banner_2 input[type="checkbox"] + label span {background:url('../images/check_box_2.png') no-repeat;}
 .buy_banner_2 input[type="checkbox"]:checked + label span {background:url('../images/checked_2.png') no-repeat;}
 .buy_banner_2 label {font-size: 1.5rem;}
@@ -235,6 +235,8 @@ div#sell_counsel_area select#counsel_area, #sub_select_wrap #sub_select {width: 
 .buy_banner_2 p {font-size: 2rem; margin-bottom: 30px;}
 .buy_banner_2 input[type="checkbox"] {float: none;width:19px; height:19px; vertical-align: sub;}
 .buy_banner_2 input[type="text"] {margin-right: 20px;font-family: 'NanumSquare_R';padding: 0 12px;width: 530px; border-bottom: 1px solid #d9d9d9;border-right: 0; border-top: 0; border-left: 0; height: 50px; line-height: 50px; margin-bottom: 40px;font-size: 2rem; color: #666;}
+.buy_banner_2 input[type="date"] {margin-right: 20px;font-family: 'NanumSquare_R';padding: 0 12px;width: 530px; border-bottom: 1px solid #d9d9d9;border-right: 0; border-top: 0; border-left: 0; height: 50px; line-height: 50px; margin-bottom: 40px;font-size: 2rem; color: #666;}
+.buy_banner_2 select {margin-right: 20px;font-family: 'NanumSquare_R';padding: 0 12px;width: 530px; border-bottom: 1px solid #d9d9d9;border-right: 0; border-top: 0; border-left: 0; height: 50px; line-height: 50px; margin-bottom: 40px;font-size: 2rem; color: #666;}
 .buy_banner_2 input[type="text"]:hover {background:#d8eeff;}
 .buy_banner_2 input[type="number"] {margin-right: 20px;font-family: 'NanumSquare_R';padding: 0 12px;width: 530px; border-bottom: 1px solid #d9d9d9;border-right: 0; border-top: 0; border-left: 0; height: 50px; line-height: 50px; margin-bottom: 40px;font-size: 2rem; color: #666;}
 .buy_banner_2 input[type="number"]:hover {background:#d8eeff;}

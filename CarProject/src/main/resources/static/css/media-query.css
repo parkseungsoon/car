@@ -15,7 +15,7 @@
 
 	.main_counsel {float:none;}
 	.container, .min_w_1200 {width:100%; padding:0;}
-	.min_w_1200 {width:100%;    min-width: auto;}
+	.min_w_1200 {width:100%;    min-width: auto; }
 	nav ul li.sitemap {background: white;}
 	.navicon-button, .mobile_navicon-button { display: inline-block; position: relative; padding: 35px 16px; transition: 0.25s; cursor: pointer; user-select: none;  height: 70px; width: 70px; z-index: 9999;}
 	.navicon-button .navicon:before, .navicon-button .navicon:after { transition: 0.25s;}
@@ -62,7 +62,7 @@
 	#slide_part .counsel_form h3 {    padding-top: 10px;}
 
 	#slide_part .counsel_form input[type="checkbox"] {vertical-align: -webkit-baseline-middle;}
-	#section_common {margin-bottom:0;}
+	#section_common {margin-bottom:0; }
 
 	.agreeDetail {left:0;    width: 100%;height: auto !important;font-size: 1.3rem; top: 410px;}
 	.agreeDetail h2 {padding-top: 0 !important; font-size: 1.5rem !important;}
@@ -186,8 +186,9 @@
 	.buy_banner_2 p {font-size:1.3rem;    padding: 0 10px; line-height: 1.6rem; color: #666; }
 	.buy_banner_2 {background: url(../images/bg_pattern.jpg); padding: 9px; width: 100%; height: auto; margin: 0 auto;}
 	.buy_banner_2 > div {background:white; height:100%;}
-	.buy_banner_2 input[type="text"] {width: 92%; margin: 0 4%;font-size: 1.5rem; height: 40px;line-height: 39px;}
+	.buy_banner_2 input[type="text"] {width: 92%; margin: 0 4%;font-size: 1.5rem; height: 30px;line-height: 30px;}
 	.buy_banner_2 input[type="number"] {width: 92%; margin: 0 4%;font-size: 1.5rem; height: 40px;line-height: 39px;}
+	.buy_banner_2 input[type="date"] {width: 92%; margin: 0 4%;font-size: 1.5rem; height: 40px;line-height: 39px;}
 	.buy_banner_2 #sub_select_wrap {width: 92%; margin: 0 4%; line-height: 33px; height: 40px;}
 	.buy_banner_2 #buy_textarea {width: 92%; margin: 0 4%; min-height:200px;font-size: 1.5rem;}
 	.buy_banner_2 .private_agree {clear:both; margin: 0; padding-top: 12px;font-size: 1.3rem;}
